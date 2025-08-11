@@ -1,0 +1,18 @@
+## Summary:
+
+### Data Analysis Key Findings
+
+* The average transaction amount for fraudulent transactions ($\$531.32$) is significantly higher than for non-fraudulent transactions ($\$67.67$).
+* Grouping the data by category revealed that `shopping_net`, `misc_net`, and `grocery_pos` have the highest fraud rates.
+* State-wise fraud rates were calculated, and the choropleth map visualizes these rates across the US, highlighting states with higher fraud incidence.
+* Analyzing fraud rates by age group shows that the `61+` age group has the highest fraud rate, followed by the `0-25` age group.
+* A new feature, `distance`, has been created to represent the distance between the cardholder and merchant locations, which could be a useful predictor of fraud.
+
+### Insights or Next Steps
+
+* **Investigate High-Fraud Categories, States, and Age Groups**: Further analyze transactions within the categories, states, and age groups with the highest fraud rates to identify specific characteristics or patterns that contribute to the increased fraud.
+* **Explore Transaction Amount Distribution**: Instead of just comparing averages, analyze the distribution of transaction amounts for fraudulent and non-fraudulent transactions. This could involve creating histograms or box plots to see if there are specific amount ranges that are more prone to fraud.
+* **Further Feature Engineering**: Create additional features that might be predictive of fraud, such as transaction frequency for a user, time since the last transaction, or temporal features extracted from the transaction timestamp.
+* **Build a Fraud Detection Model**: Use the insights gained and engineered features to build a machine learning model that can predict fraudulent transactions. **Crucially, when building the model, address the class imbalance in the dataset using techniques like SMOTE or adjusting class weights.**
+* **Evaluate Model Performance**: After training the model, evaluate its performance using appropriate metrics for imbalanced datasets, such as precision, recall, F1-score, and AUC-ROC.
+* **Analyze Temporal Patterns**: Investigate if there are specific times of the day, days of the week, or seasons when fraudulent transactions are more likely to occur.
